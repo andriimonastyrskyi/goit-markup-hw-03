@@ -22,7 +22,7 @@
   <body>
     <!-- Шапка сторінки-->
     <header class="header">
-      <div class="container">
+      <div class="container header-container">
         <a lang="en" class="header-logo text" href="./index.html"
           ><span class="logo-web">Web</span>Studio</a
         >
@@ -40,10 +40,12 @@
           </ul>
         </nav>
         <ul class="header-list">
-          <li>
+          <li class="header-contact">
             <a href="mailto:info@devstudio.com" class="header-mail active">info@devstudio.com</a>
           </li>
-          <li><a href="tel:+380961111111" class="header-tel active">+38 096 111 11 11</a></li>
+          <li class="header-contact">
+            <a href="tel:+380961111111" class="header-tel active">+38 096 111 11 11</a>
+          </li>
         </ul>
       </div>
     </header>
@@ -54,29 +56,29 @@
         <button type="button" class="btn active-btn">Замовити послугу</button>
       </section>
       <!----------------опис adventge-->
-      <section>
+      <section class="section advatage-container">
         <div class="container">
           <h2 class="visually-hidden">Переваги</h2>
           <ul class="advatage list">
-            <li>
+            <li class="advatage-item">
               <h3 class="advatage-title">УВАГА ДО ДЕТАЛЕЙ</h3>
               <p class="advantage-text">
                 Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
               </p>
             </li>
-            <li>
+            <li class="advatage-item">
               <h3 class="advatage-title">ПУНКТУАЛЬНІСТЬ</h3>
               <p class="advantage-text">
                 Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
               </p>
             </li>
-            <li>
+            <li class="advatage-item">
               <h3 class="advatage-title">ПЛАНУВАННЯ</h3>
               <p class="advantage-text">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li>
+            <li class="advatage-item">
               <h3 class="advatage-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
               <p class="advantage-text">
                 Значимість цих проблем настільки очевидна, що реалізація планових завдань.
@@ -86,43 +88,55 @@
         </div>
       </section>
       <!--------- about ----------->
-      <section>
+      <section class="section about-section">
         <div class="container">
           <h2 class="about-work">Чим ми займаємося</h2>
           <ul class="about-list list">
-            <li><img src="./image/img.jpg" alt="Картинка" width="370" /></li>
-            <li><img src="./image/img(1).jpg" alt="Картинка 1" width="370" /></li>
-            <li><img src="./image/img(2).jpg" alt="Картинка 2" width="370" /></li>
+            <li class="about-item"><img src="./image/img.jpg" alt="Картинка" width="370" /></li>
+            <li class="about-item">
+              <img src="./image/img(1).jpg" alt="Картинка 1" width="370" />
+            </li>
+            <li class="about-item">
+              <img src="./image/img(2).jpg" alt="Картинка 2" width="370" />
+            </li>
           </ul>
         </div>
       </section>
       <!-----------team --------------- -->
-      <section class="team-section">
+      <section class="section team-section">
         <div class="container">
           <h2 class="team-title">Наша команда</h2>
-          <ul class="cards list">
+          <ul class="cards list list">
             <li class="card">
               <img src="./image/igor.jpg" alt="Ігор Дем'яненко" width="270" />
-              <h3 class="card-titel">Ігор Дем'яненко</h3>
-              <p class="card-work">Product Designer</p>
+              <div class="conteiner-card">
+                <h3 class="card-titel">Ігор Дем'яненко</h3>
+                <p class="card-work">Product Designer</p>
+              </div>
             </li>
 
             <li class="card">
               <img src="./image/olga.jpg" alt="Ольга Рєпіна" width="270" />
-              <h3 class="card-titel">Ольга Рєпіна</h3>
-              <p class="card-work">Frontend Developer</p>
+              <div class="conteiner-card">
+                <h3 class="card-titel">Ольга Рєпіна</h3>
+                <p class="card-work">Frontend Developer</p>
+              </div>
             </li>
 
             <li class="card">
               <img src="./image/mukola.jpg" alt="Микола Тарасов" width="270" />
-              <h3 class="card-titel">Микола Тарасов</h3>
-              <p class="card-work">Marketing</p>
+              <div class="conteiner-card">
+                <h3 class="card-titel">Микола Тарасов</h3>
+                <p class="card-work">Marketing</p>
+              </div>
             </li>
 
             <li class="card">
               <img src="./image/mykhaylo.jpg" alt="Михайло Єрмаков" width="270" />
-              <h3 class="card-titel">Михайло Єрмаков</h3>
-              <p class="card-work">UI Designer</p>
+              <div class="conteiner-card">
+                <h3 class="card-titel">Михайло Єрмаков</h3>
+                <p class="card-work">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -130,13 +144,13 @@
     </main>
     <!--Підвал-->
     <footer class="footer-page">
-      <div class="container">
+      <div class="footer-container container">
         <a lang="en" href="/index.html" class="footer-logo"
           ><span class="logo-web">Web</span>Studio</a
         >
         <address class="address">
           <ul class="address-list">
-            <li>
+            <li class="footer-list">
               <a
                 href="https://goo.gl/maps/MEvcV4YPH9uP2NybA"
                 rel="noopener nofollow noreferrer"
@@ -145,7 +159,7 @@
                 >м. Київ, пр-т Лесі Українки, 26</a
               >
             </li>
-            <li>
+            <li class="footer-list">
               <a
                 href="mailto:info@devstudio.com"
                 rel="noopener nofollow noreferrer"
@@ -153,7 +167,7 @@
                 >info@devstudio.com</a
               >
             </li>
-            <li>
+            <li class="footer-list">
               <a
                 href="tel:+380961111111"
                 rel="noopener nofollow noreferrer"

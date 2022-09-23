@@ -110,6 +110,11 @@ body {
   border-bottom: 1px solid var(--line-header);
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 .header-logo {
   display: inline-block;
   padding-top: 24px;
@@ -127,12 +132,32 @@ body {
   color: var(--accent-text);
 }
 
+.nav-page {
+  display: flex;
+}
+
 .nav-link {
+  display: block;
+  padding: 32px 0;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: inherit;
   text-decoration: none;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contact:not(:last-child) {
+  margin-right: 50px;
 }
 
 .active.current {
@@ -150,10 +175,14 @@ body {
 /* ---------------------секція hero ---------------------*/
 .hero {
   background-color: var(--first-background);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
   max-width: 696px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 
   font-weight: 900;
   font-size: 44px;
@@ -165,6 +194,13 @@ body {
 }
 
 .btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  min-width: 216px;
+
   border-color: transparent;
   border-radius: 4px;
   color: var(--btn-color);
@@ -181,9 +217,24 @@ body {
 
 /* -------------adven---------------- */
 
+.advatage-container {
+  padding-bottom: 47px;
+}
+
+.advatage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.advatage-item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
 .advatage-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
@@ -194,10 +245,26 @@ body {
 }
 
 /* ------------about------------------ */
+.about-section {
+  padding-top: 47px;
+}
+
+.about-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+
 .about-work {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.16;
+  line-height: 1.17;
   text-align: center;
 }
 
@@ -206,27 +273,44 @@ body {
 .team-section {
   background-color: var(--secondary-background);
 }
+
 .team-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.16x;
+  line-height: 1.17x;
   text-align: center;
   color: var(--primary-text);
 }
 .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.conteiner-card {
+  padding: 30px 10px;
+  text-align: center;
 }
 .card {
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
+  border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-background);
+  flex-basis: calc((100% - 4 * 30px) / 4);
 }
 .card-titel {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.19;
   color: var(--primary-text);
 }
 .card-work {
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.19;
   color: var(--secondary-text);
 }
 
@@ -236,7 +320,15 @@ body {
   background-color: var(--first-background);
 }
 
+.footer-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -247,6 +339,10 @@ body {
 
 .address {
   font-style: normal;
+}
+
+.footer-list:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .address-link {
@@ -260,7 +356,21 @@ body {
 }
 
 /* -----------портфоліо-------------------- */
+
+.btn-lists {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.btn-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .btn-portfolio {
+  padding: 6px 22px;
+  background: #f5f4fa;
+
   border-color: transparent;
   border-radius: 4px;
   font-family: inherit;
@@ -272,13 +382,31 @@ body {
   border: none;
   background-color: var(--secondary-background);
 }
+.project-lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
 
 .project-link {
   text-decoration: none;
   color: inherit;
 }
 
+.project-container {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
 .project-title {
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
